@@ -6,14 +6,16 @@
   </head>
   <body>
     <script>
+      var BASE_URL = 'https://syk3s.github.io/trello-echarts-powerup';
+
       TrelloPowerUp.initialize({
         'card-back-section': function (t, options) {
           return {
             title: 'Média de Views',
-            icon: 'https://cdn.jsdelivr.net/npm/echarts@5/map/svg/icon.svg',
+            icon: BASE_URL + '/icon.svg',
             content: {
               type: 'iframe',
-              url: t.signUrl('./card-back.html'),
+              url: t.signUrl(BASE_URL + '/card-back.html'),
               height: 400,
             },
           };
