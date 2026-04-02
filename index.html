@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <script src="https://p.trellocdn.com/power-up.min.js"></script>
+  </head>
+  <body>
+    <script>
+      TrelloPowerUp.initialize({
+        'card-back-section': function (t, options) {
+          return {
+            title: 'Média de Views',
+            icon: 'https://cdn.jsdelivr.net/npm/echarts@5/map/svg/icon.svg',
+            content: {
+              type: 'iframe',
+              url: t.signUrl('./card-back.html'),
+              height: 400,
+            },
+          };
+        },
+      });
+    </script>
+  </body>
+</html>
