@@ -9,6 +9,15 @@
       var BASE_URL = 'https://syk3s.github.io/trello-echarts-powerup';
 
       TrelloPowerUp.initialize({
+        'card-detail-badges': function (t, options) {
+          return [
+            {
+              title: 'Views',
+              text: 'ECharts OK',
+              color: 'green',
+            },
+          ];
+        },
         'card-back-section': function (t, options) {
           return {
             title: 'Média de Views',
